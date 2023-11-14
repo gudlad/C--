@@ -2,6 +2,5 @@
 
 int main()
 {
-    auto result = 20;
-    std::cout << result << std::endl;
+    std::cout << "Hello World" << std::endl;
 }
