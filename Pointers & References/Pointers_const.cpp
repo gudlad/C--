@@ -22,6 +22,7 @@ int main()
     // score_ptr2 = &lowScore; // !ERROR
 
     // 3. Constant pointers to constants
+    // Pointer and data both are constant and can't be changed.
     const int *const ptr3{&highScore};
     *ptr3 = 3000;     //! ERROR
     ptr3 = &lowScore; //! ERROR
