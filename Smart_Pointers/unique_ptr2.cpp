@@ -53,6 +53,6 @@ int main()
     auto ptr3 = std::make_unique<Account>("Villain", 1000);
 
     std::unique_ptr<Account> ptr5;
-    //  p5 = p1; //! error can't copy unique pointer
+    //  ptr5 = ptr1; //! error can't copy unique pointer
     ptr5 = std::move(ptr2); //? moves the ownership of Account obj to ptr5
 }

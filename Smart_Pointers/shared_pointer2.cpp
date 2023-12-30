@@ -14,9 +14,17 @@ private:
 public:
     Account(std::string name);
     ~Account();
+    std::string getName() const { return name; }
     void deposit(int a);
     void withdraw(int b);
+    friend std::ostream &operator<<(std::ostream &os, const Account &rhs);
 };
+
+std::ostream &operator<<(std::ostream &os, const Account &rhs)
+{
+    os << rhs.getName() << endl;
+    return os;
+}
 
 void Account::deposit(int a)
 {
@@ -64,6 +72,9 @@ int main()
         accounts.push_back(acc3);
 
         for (const auto &acc : accounts)
+        {
+            cout << "Account:" << *acc << endl;
             cout << acc.use_count() << endl;
+        }
     }
 }
