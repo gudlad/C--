@@ -31,5 +31,18 @@ int main()
     strcpy(last_name, first_name);
     cout << strcmp(first_name, last_name) << endl;
 
+    std::string target{"lovingly"};
+    std::string search{"love"};
+
+    size_t s = target.find(search);
+
+    if (s != std::string::npos)
+    {
+        std::cout << "found!" << std::endl;
+    }
+    else
+    {
+        std::cout << "not found!" << std::endl;
+    }
     return 0;
 }

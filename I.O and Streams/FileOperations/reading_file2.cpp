@@ -9,7 +9,7 @@ using std::endl;
 int main()
 {
     std::fstream in_file;
-    std::string line;
+    // std::string line;
 
     in_file.open("test.txt");
 
@@ -18,8 +18,14 @@ int main()
         std::cerr << "failed" << endl;
         return 1;
     }
+    char line[256];
 
-    while (getline(in_file, line))
+    // while (getline(in_file, line))
+    // {
+    //     cout << line << endl;
+    // }
+
+    while (in_file.getline(line, sizeof(line))) // using c style string.
     {
         cout << line << endl;
     }

@@ -11,6 +11,7 @@ using std::endl;
 int main()
 {
     std::fstream in_file;
+    // std::fstream in_file("test.txt", std::ios::in | std::ios::binary);
     std::string line;
 
     in_file.open("test.txt");
