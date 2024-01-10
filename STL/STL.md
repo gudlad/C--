@@ -60,6 +60,6 @@ _ex:_ stack, queue, priority queue.
 
 ---
 
-## Types of Algorithms:
+## _Types of Algorithms:_
 
 Non-modifying and modifying algorithms.
