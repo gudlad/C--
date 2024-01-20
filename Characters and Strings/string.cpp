@@ -1,9 +1,18 @@
 #include <iostream>
 #include <iomanip>
-#include <string> // important!
+#include <string> // important! <iostream> includes <string>, directly or indirectly, but don't rely on it.
 
 using namespace std; // or use std::
 
+/*
+! Using CPP Strings :
+
+Methods:
+string.at() - performs bounds checking
+string.substr(start_index, length)
+string.find(search_string)  -- returns string::npos if not found
+...
+*/
 int main()
 {
 
@@ -72,7 +81,7 @@ int main()
     s3 = s5 + " and " + s2 + " juice";   // Apple and Banana juice
     cout << "s3 is now: " << s3 << endl; // Apple and Banana Juice
 
-    s3 = "nice " + " cold " + s5 + "juice"; // Compiler error
+    // s3 = "nice " + " cold " + s5 + "juice"; // Compiler error
 
     // for loop
     cout
@@ -116,6 +125,11 @@ int main()
     getline(cin, full_name);
 
     cout << "Your full name is: " << full_name << endl;
+
+    /*
+    getline(cin, full_name,'x');  // guru prasadx  here 'x' is delimiter.
+    cout << full_name << endl;    // guru prasad
+    */
 
     // Find
     cout << "\nfind"
